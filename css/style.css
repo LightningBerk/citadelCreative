@@ -596,17 +596,18 @@ body {
 .folder-panel-front {
     position: relative;
     z-index: 10;
-    min-height: 250px;
+    min-height: 380px;
+    /* Taller for 9:16 ratio */
     background: var(--bg-card);
     border: 1px solid var(--border-color);
-    border-radius: 8px;
+    border-radius: 12px;
     padding: var(--space-md);
     display: grid;
-    grid-template-columns: 140px 1fr;
-    gap: var(--space-md);
+    grid-template-columns: 220px 1fr;
+    /* Wider column for larger photo */
+    gap: var(--space-lg);
     align-items: start;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    /* Box shadow helps separate front from back */
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
 }
 
@@ -631,30 +632,26 @@ body {
 /* Back Panel (The Reveal) */
 .folder-panel-back {
     position: absolute;
-    top: 5%;
-    /* Slight offset for depth */
+    top: 0;
     right: 0;
-    width: 95%;
-    /* Slightly smaller than front */
-    height: 90%;
+    width: 92%;
+    /* Slightly narrower */
+    height: 100%;
     background: var(--bg-body);
-    /* Darker/different bg to distinguish */
     border: 1px solid var(--accent-green);
-    border-radius: 8px;
+    border-radius: 12px;
     z-index: 1;
-    /* Behind front */
     opacity: 0;
-    /* Hidden by default */
     transform: translateX(0) scale(0.95);
-    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition: all 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
 
     /* Styling content inside */
     display: flex;
-    align-items: center;
-    padding: var(--space-md) var(--space-md) var(--space-md) var(--space-xl);
-    /* Left padding larger for overlap */
+    flex-direction: column;
+    justify-content: center;
+    padding: var(--space-xl) var(--space-xl) var(--space-xl) var(--space-xxl);
+    /* More padding */
     pointer-events: none;
-    /* Can't click when hidden */
     overflow: hidden;
 }
 
@@ -668,14 +665,17 @@ body {
 .folder-bio-header {
     font-family: var(--font-headline);
     color: var(--accent-green);
-    font-size: 1.1rem;
-    margin-bottom: var(--space-sm);
+    font-size: 1.4rem;
+    margin-bottom: var(--space-md);
+    letter-spacing: -0.02em;
 }
 
 .folder-bio-text {
-    font-size: 0.9rem;
-    line-height: 1.5;
+    font-size: 1rem;
+    line-height: 1.6;
     color: var(--text-body);
+    margin-bottom: var(--space-md);
+    font-weight: 300;
 }
 
 .folder-action {
@@ -758,12 +758,15 @@ body {
 
 /* Team Photo Styles */
 .team-photo {
-    width: 140px;
-    height: 200px;
-    border-radius: 12px;
+    width: 200px;
+    /* Wider */
+    height: 320px;
+    /* Taller ~2:3.2 ratio (approx 9:16ish) */
+    border-radius: 8px;
     overflow: hidden;
-    border: 3px solid var(--accent-green);
+    border: 2px solid var(--accent-green);
     flex-shrink: 0;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
 
 .team-photo img {
