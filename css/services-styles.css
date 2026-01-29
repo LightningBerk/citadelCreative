@@ -1,0 +1,383 @@
+/* =============================================
+   CITADEL CREATIVE - Services Page Styles
+   ============================================= */
+
+/* --- Services Hero Enhancement --- */
+.services-hero {
+    text-align: left;
+    padding-left: 12%;
+}
+
+.services-hero h1 {
+    max-width: 700px;
+}
+
+.hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: var(--space-md);
+    padding: 0.5rem 1rem;
+    background: rgba(139, 92, 246, 0.1);
+    border: 1px solid rgba(139, 92, 246, 0.3);
+    border-radius: 4px;
+    font-family: var(--font-code);
+    font-size: 0.8rem;
+    color: var(--accent-purple);
+}
+
+/* --- Spots Counter --- */
+.spots-counter {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: var(--space-sm);
+    padding: 0.75rem 1.25rem;
+    background: rgba(16, 185, 129, 0.1);
+    border: 1px solid var(--accent-green);
+    border-radius: 4px;
+}
+
+.spots-number {
+    font-family: var(--font-headline);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--accent-green);
+}
+
+.spots-text {
+    font-family: var(--font-code);
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+/* --- Pricing Scarcity Banner --- */
+.pricing-scarcity {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1rem 1.25rem;
+    background: linear-gradient(90deg, rgba(16, 185, 129, 0.1) 0%, rgba(139, 92, 246, 0.1) 100%);
+    border-left: 3px solid var(--accent-green);
+    margin-bottom: var(--space-lg);
+    font-size: 0.95rem;
+    color: var(--text-muted);
+}
+
+.pricing-scarcity strong {
+    color: var(--accent-green);
+}
+
+.scarcity-icon {
+    font-size: 1.25rem;
+}
+
+.badge-icon {
+    color: var(--accent-green);
+}
+
+/* --- Value Section --- */
+.value-section {
+    background: var(--bg-primary);
+}
+
+.value-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-md);
+    margin-top: var(--space-md);
+}
+
+.value-card {
+    padding: var(--space-md);
+    background: var(--bg-card);
+    border-top: 2px solid var(--accent-green);
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.value-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--accent-purple);
+}
+
+.value-icon {
+    font-size: 1.5rem;
+    margin-bottom: var(--space-sm);
+}
+
+.value-card h3 {
+    font-family: var(--font-headline);
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+.value-card p {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+/* --- Services Breakdown --- */
+.services-breakdown {
+    background: var(--bg-secondary);
+}
+
+.section-intro {
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    max-width: 700px;
+    margin-bottom: var(--space-lg);
+}
+
+/* --- Pricing Grid --- */
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-md);
+    margin-bottom: var(--space-lg);
+}
+
+.pricing-card {
+    display: flex;
+    flex-direction: column;
+    background: var(--bg-card);
+    border: 1px solid var(--bg-secondary);
+    position: relative;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.pricing-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+}
+
+.pricing-card--featured {
+    border-color: var(--accent-green);
+    box-shadow: 0 0 0 1px var(--accent-green);
+}
+
+.pricing-card--custom {
+    border-color: var(--accent-purple);
+}
+
+.pricing-badge {
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--accent-green);
+    color: var(--bg-primary);
+    font-family: var(--font-code);
+    font-size: 0.7rem;
+    font-weight: 500;
+    padding: 0.25rem 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.pricing-header {
+    padding: var(--space-md);
+    border-bottom: 1px solid var(--bg-secondary);
+}
+
+.pricing-header h3 {
+    font-family: var(--font-headline);
+    font-size: 1.25rem;
+    margin-bottom: 0.25rem;
+}
+
+.pricing-desc {
+    color: var(--text-muted);
+    font-size: 0.85rem;
+}
+
+.pricing-body {
+    padding: var(--space-md);
+    flex: 1;
+}
+
+.price-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid var(--bg-secondary);
+}
+
+.price-row--alt {
+    border-bottom: none;
+    margin-bottom: var(--space-sm);
+}
+
+.price-label {
+    font-family: var(--font-code);
+    font-size: 0.8rem;
+    color: var(--text-muted);
+}
+
+.price-value {
+    font-family: var(--font-headline);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--accent-green);
+}
+
+.price-row--alt .price-value {
+    font-size: 1rem;
+    color: var(--text-muted);
+}
+
+.pricing-features {
+    list-style: none;
+    margin-top: var(--space-sm);
+}
+
+.pricing-features li {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    padding: 0.5rem 0;
+    padding-left: 1.25rem;
+    position: relative;
+}
+
+.pricing-features li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--accent-green);
+    font-size: 0.8rem;
+}
+
+.pricing-footer {
+    padding: var(--space-md);
+    border-top: 1px solid var(--bg-secondary);
+}
+
+.pricing-footer .btn {
+    width: 100%;
+    text-align: center;
+}
+
+.pricing-note {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.pricing-note strong {
+    color: var(--text-primary);
+}
+
+/* --- Audience Section --- */
+.audience-section {
+    background: var(--bg-primary);
+}
+
+.audience-content {
+    max-width: 800px;
+}
+
+.audience-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-sm);
+    margin: var(--space-md) 0;
+}
+
+.audience-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem 1rem;
+    background: var(--bg-card);
+    border-left: 2px solid var(--accent-green);
+    font-family: var(--font-headline);
+    font-size: 0.95rem;
+}
+
+.audience-icon {
+    font-size: 1.25rem;
+}
+
+.audience-note {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    margin-top: var(--space-md);
+    padding: var(--space-md);
+    background: rgba(139, 92, 246, 0.05);
+    border-left: 3px solid var(--accent-purple);
+}
+
+/* --- Contact Section --- */
+.contact-section {
+    background: var(--bg-secondary);
+    text-align: center;
+}
+
+.contact-content {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact-description {
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    margin-bottom: var(--space-md);
+}
+
+.contact-cta {
+    margin-bottom: var(--space-sm);
+}
+
+.contact-note {
+    color: var(--text-dim);
+    font-size: 0.9rem;
+}
+
+.contact-note a {
+    color: var(--accent-green);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.contact-note a:hover {
+    color: var(--accent-purple);
+}
+
+/* --- Responsive --- */
+@media (max-width: 1024px) {
+    .pricing-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .value-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .services-hero {
+        padding-left: var(--content-padding);
+        text-align: left;
+    }
+
+    .pricing-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .value-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .audience-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-badge {
+        flex-wrap: wrap;
+        text-align: center;
+        justify-content: center;
+    }
+}

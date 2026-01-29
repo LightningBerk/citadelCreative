@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Citadel — Accelerate Your Ideation</title>
+    <link rel="icon" type="image/png" href="images/citadelHex.png">
+    <meta name="description"
+        content="AI-powered knowledge acceleration for Obsidian. Dump thoughts, link later, let AI amplify your iteration. $20 early adopter access includes setup + support.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Press+Start+2P&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/stack-styles.css">
+</head>
+
+<body>
+    <!-- Animated background nodes -->
+    <div class="bg-nodes" id="bgNodes"></div>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <nav class="nav nav-scroll-hidden" id="stickyNav">
+            <a href="index.html" class="logo">
+                <span class="logo-icon">⬡</span>
+                <span class="logo-text">Citadel</span>
+            </a>
+            <a href="#pricing" class="nav-pricing">Pricing</a>
+        </nav>
+
+        <div class="hero-content">
+            <div class="hero-logo-container">
+                <div class="logo logo-large">
+                    <span class="logo-icon">⬡</span>
+                    <span class="logo-text">Citadel</span>
+                </div>
+                <div class="splash-text">Early Access!</div>
+            </div>
+            <div class="hero-badge">Limited Time Early Adopter Launch</div>
+            <h1 class="hero-title">Accelerate Your <span class="gradient-text">Ideation</span></h1>
+            <p class="hero-subtitle">
+                Dump thoughts. Link later. Let AI amplify your iteration.<br>
+                The Obsidian + Claude stack that turns scattered notes into connected insight.
+            </p>
+            <div class="hero-cta">
+                <a href="#pricing" class="btn btn-primary">Get Citadel — $20</a>
+                <a href="#how-it-works" class="btn btn-secondary">See How It Works</a>
+            </div>
+        </div>
+
+        <div class="hero-visual">
+            <div class="node-cluster">
+                <div class="node node-1"></div>
+                <div class="node node-2"></div>
+                <div class="node node-3"></div>
+                <div class="node node-4"></div>
+                <div class="node node-center">
+                    <span>AI</span>
+                </div>
+                <svg class="connections" viewBox="0 0 300 300">
+                    <line x1="150" y1="150" x2="50" y2="80" class="connection-line" />
+                    <line x1="150" y1="150" x2="250" y2="80" class="connection-line" />
+                    <line x1="150" y1="150" x2="80" y2="220" class="connection-line" />
+                    <line x1="150" y1="150" x2="220" y2="220" class="connection-line" />
+                </svg>
+            </div>
+        </div>
+    </header>
+
+    <!-- Problem Section -->
+    <section class="section problem" id="problem">
+        <div class="container">
+            <h2 class="section-title">The <span class="gradient-text">Problem</span></h2>
+            <div class="problem-grid node-flow">
+                <div class="problem-card nexus-node" id="prob1">
+                    <div class="problem-icon">📝</div>
+                    <h3>Thoughts Scatter</h3>
+                    <p>Great ideas get lost in the chaos. Notes pile up but never connect into something bigger.</p>
+                </div>
+                <div class="problem-card nexus-node" id="prob2">
+                    <div class="problem-icon">🔗</div>
+                    <h3>Linking Takes Forever</h3>
+                    <p>Obsidian's power is in connections—but building them manually is slow and tedious.</p>
+                </div>
+                <div class="problem-card nexus-node" id="prob3">
+                    <div class="problem-icon">🐢</div>
+                    <h3>Slow Iteration</h3>
+                    <p>You know there's insight buried in your notes. Mining it takes hours you don't have.</p>
+                </div>
+                <div class="node-connector-lines"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solution Section -->
+    <section class="section solution" id="solution">
+        <div class="container">
+            <div class="solution-content">
+                <h2 class="section-title">Citadel <span class="gradient-text">Amplifies</span> Your Flow</h2>
+                <p class="solution-text">
+                    Obsidian's magic is "dump now, organize later." Citadel supercharges this with an AI agent
+                    that understands your vault, surfaces connections you missed, and accelerates your iteration
+                    from days to minutes.
+                </p>
+                <ul class="solution-list">
+                    <li><span class="check">✓</span> Capture thoughts rapidly—AI handles the linking</li>
+                    <li><span class="check">✓</span> Surface buried connections across your entire vault</li>
+                    <li><span class="check">✓</span> Iterate on ideas at the speed of thought</li>
+                    <li><span class="check">✓</span> Battle-tested guidance file that makes Claude actually useful</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="section how-it-works" id="how-it-works">
+        <div class="container">
+            <h2 class="section-title">How It <span class="gradient-text">Works</span></h2>
+            <div class="steps-flow">
+                <div class="step nexus-node" id="step1">
+                    <div class="step-number"><span>1</span></div>
+                    <h3>Drop In</h3>
+                    <p>Add the Citadel guidance file to your Obsidian vault. Works with Claude Desktop or Claude Code.
+                    </p>
+                </div>
+
+                <div class="flow-path">
+                    <svg viewBox="0 0 100 20" preserveAspectRatio="none">
+                        <path d="M0,10 Q50,20 100,10" class="path-glow" />
+                        <path d="M0,10 Q50,20 100,10" class="path-main" />
+                    </svg>
+                </div>
+
+                <div class="step nexus-node" id="step2">
+                    <div class="step-number"><span>2</span></div>
+                    <h3>Configure</h3>
+                    <p>Quick MCP setup connects Claude to your vault. We guide you through every step.</p>
+                </div>
+
+                <div class="flow-path">
+                    <svg viewBox="0 0 100 20" preserveAspectRatio="none">
+                        <path d="M0,10 Q50,0 100,10" class="path-glow" />
+                        <path d="M0,10 Q50,0 100,10" class="path-main" />
+                    </svg>
+                </div>
+
+                <div class="step nexus-node" id="step3">
+                    <div class="step-number"><span>3</span></div>
+                    <h3>Accelerate</h3>
+                    <p>Start dumping thoughts. Claude understands your system and amplifies your ideation.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What's Included -->
+    <section class="section included" id="included">
+        <div class="container">
+            <h2 class="section-title">What's <span class="gradient-text">Included</span></h2>
+            <div class="included-hero nexus-node">
+                <div class="included-hero-visual">
+                    <div class="mini-node-cluster">
+                        <div class="mini-node node-brain">🧠</div>
+                        <div class="mini-node node-bulb">💡</div>
+                        <div class="mini-node node-doc-center">📄</div>
+                        <div class="mini-node node-note">📝</div>
+                        <svg class="mini-connections" viewBox="0 0 200 200">
+                            <line x1="100" y1="100" x2="40" y2="40" class="mini-line" />
+                            <line x1="100" y1="100" x2="160" y2="40" class="mini-line" />
+                            <line x1="100" y1="100" x2="50" y2="160" class="mini-line" />
+                        </svg>
+                    </div>
+                </div>
+                <div class="included-hero-content">
+                    <h3>The Complete Citadel Stack</h3>
+                    <p class="included-text">
+                        A battle-tested 350+ line guidance file that makes Claude actually useful,
+                        comprehensive setup guides for any OS, and direct Discord access for setup support.
+                    </p>
+                    <div class="mini-features">
+                        <span class="pill"><span class="check">✓</span> Protocol File</span>
+                        <span class="pill"><span class="check">✓</span> Setup Docs</span>
+                        <span class="pill"><span class="check">✓</span> Priority Support</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing -->
+    <section class="section pricing" id="pricing">
+        <div class="container">
+            <div class="pricing-card">
+                <div class="pricing-badge">Limited Time Launch Offer</div>
+                <div class="pricing-amount">
+                    <span class="currency">$</span>
+                    <span class="price">20</span>
+                    <span class="period">one-time payment</span>
+                </div>
+                <div class="limited-tag">Only for the first 100 early adopters</div>
+                <ul class="pricing-features">
+                    <li><span class="check">✓</span> claude.md guidance file</li>
+                    <li><span class="check">✓</span> Comprehensive setup guide</li>
+                    <li><span class="check">✓</span> Personal setup support</li>
+                    <li><span class="check">✓</span> Ongoing community access</li>
+                    <li><span class="check">✓</span> Future updates included</li>
+                </ul>
+                <a href="#" class="btn btn-primary btn-large">Get Citadel Now</a>
+                <p class="pricing-note">Instant access. No subscription. No upsells.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <span class="logo-icon">⬡</span>
+                    <span class="logo-text">Citadel</span>
+                    <p class="footer-tagline">Your fortress of knowledge.</p>
+                </div>
+                <div class="footer-community">
+                    <h4>Join the Community</h4>
+                    <p>Connect with other Citadel users, share workflows, and help shape the future of the product.</p>
+                    <a href="#" class="btn btn-discord">
+                        <svg class="discord-icon" viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028 14.09 14.09 0 0 0 1.226-1.994.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z" />
+                        </svg>
+                        Join Discord Community
+                    </a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 <a href="index.html">Citadel Creative</a>. Built with the stack it sells.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/stack-script.js"></script>
+</body>
+
+</html>
