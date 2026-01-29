@@ -26,6 +26,11 @@
     <!-- Grain Overlay -->
     <div class="grain-overlay" aria-hidden="true"></div>
 
+    <!-- Hexagon Scroll Frame -->
+    <div class="hex-frame" aria-hidden="true">
+        <img src="images/citadelHex.png" alt="" class="hex-frame-img">
+    </div>
+
     <!-- Navigation -->
     <nav class="nav">
         <a href="index.html" class="nav-logo">
@@ -51,36 +56,41 @@
                 <a href="#product" class="btn btn-secondary">Products</a>
                 <a href="#community" class="btn btn-tertiary">Join the Community</a>
             </div>
+
+            <div class="scroll-indicator">
+                <span class="scroll-text">Scroll to Explore</span>
+                <div class="scroll-line"></div>
+            </div>
         </div>
     </header>
-
-    <!-- Mission Section -->
-    <section class="section mission" id="mission">
-        <div class="mission-content">
-            <span class="section-label">The Philosophy</span>
-            <h2>Traditional agencies are slow. AI wrappers are generic.</h2>
-            <p class="mission-text">We are the sweet spot of <strong>High-Leverage Engineering</strong>—real developers
-                wielding AI as a force multiplier. But tools aren't the point. <strong>Community is.</strong> We're
-                building in public, sharing what works, and inviting others to join the journey.</p>
-        </div>
-    </section>
 
     <!-- Services Section -->
     <section class="section services" id="services">
         <span class="section-label">The Engines</span>
         <h2>What We Build</h2>
 
+        <!-- Portfolio Pricing Badge -->
+        <div class="services-scarcity">
+            <span class="scarcity-badge">◆ Portfolio Pricing — First 10 Clients Only</span>
+            <span class="scarcity-count">9 of 10 spots remaining</span>
+        </div>
+
         <div class="services-grid">
-            <article class="service-card">
+            <!-- Web Dev - Primary Focus -->
+            <article class="service-card service-card--primary">
                 <h3>Web Design & Development</h3>
+                <p class="service-pricing">Starting from <strong>$350</strong></p>
                 <p>Bespoke microsites and highly polished interfaces. We build digital products that feel like precision
                     instruments, not templates.</p>
+                <a href="services.html" class="btn btn-primary">View Packages</a>
             </article>
 
+            <!-- AI Integration - Secondary -->
             <article class="service-card service-card--offset">
                 <h3>AI Integration</h3>
                 <p>Custom workflows, 'Second Brain' architecture for teams, and implementation of cutting-edge tooling.
                     We make AI work for your process, not the other way around.</p>
+                <a href="mailto:asa@citadelcreative.xyz" class="btn btn-secondary">Get in Touch</a>
             </article>
         </div>
     </section>
@@ -113,6 +123,20 @@
         </div>
     </section>
 
+    <!-- Mission Section -->
+    <section class="section mission" id="mission">
+        <div class="mission-content">
+            <span class="section-label">The Philosophy</span>
+            <h2>Traditional agencies are slow. AI wrappers are generic.</h2>
+            <p class="mission-text">We are the sweet spot of <strong>High-Leverage Engineering</strong>—real developers
+                wielding AI as a force multiplier. But tools aren't the point. <strong>Community is.</strong> We're
+                building in public, sharing what works, and inviting others to join the journey.</p>
+            <div style="margin-top: var(--space-md);">
+                <a href="team.html" class="btn btn-secondary">Meet the Builders</a>
+            </div>
+        </div>
+    </section>
+
     <!-- Community Section -->
     <section class="section community" id="community">
         <div class="community-content">
@@ -120,7 +144,14 @@
             <h2>Join the Citadel</h2>
             <p class="community-description">Where builders share, learn, and collaborate. Not a newsletter. Not a
                 course. A place to build together.</p>
-            <a href="#" class="btn btn-primary btn-large">Join the Discord</a>
+        </div>
+
+        <!-- Discord Widget -->
+        <div class="discord-widget-container">
+            <iframe src="https://discord.com/widget?id=1462565205383975022&theme=dark" width="350" height="400"
+                sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"
+                class="discord-widget" title="Join the Citadel Discord">
+            </iframe>
         </div>
     </section>
 
@@ -136,6 +167,9 @@
         </div>
     </footer>
 
+    <!-- GSAP + ScrollTrigger -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
     <script src="js/script.js"></script>
 </body>
 

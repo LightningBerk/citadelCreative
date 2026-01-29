@@ -37,4 +37,40 @@ document.addEventListener('DOMContentLoaded', () => {
         el.classList.add('reveal-on-scroll');
         revealObserver.observe(el);
     });
+
+    // --- Scroll Indicator Fade ---
+    const scrollIndicator = document.querySelector('.scroll-indicator');
+    if (scrollIndicator) {
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                scrollIndicator.classList.add('fade-out');
+            } else {
+                scrollIndicator.classList.remove('fade-out');
+            }
+        });
+    }
+
+    // --- Hexagon Scroll Rotation (GSAP ScrollTrigger) ---
+    // Only run on larger screens where hexagon is visible
+    if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined' && window.innerWidth > 900) {
+        gsap.registerPlugin(ScrollTrigger);
+
+        const hexFrame = document.querySelector('.hex-frame');
+        if (hexFrame) {
+            // Count main content sections for rotation calculation
+            const sections = document.querySelectorAll('.hero, .section');
+            const totalRotation = (sections.length - 1) * 60; // 60° per section transition
+
+            gsap.to('.hex-frame', {
+                rotation: totalRotation,
+                ease: 'none',
+                scrollTrigger: {
+                    trigger: 'body',
+                    start: 'top top',
+                    end: 'bottom bottom',
+                    scrub: 1.5, // Smooth 1.5-second lag for silky feel
+                }
+            });
+        }
+    }
 });

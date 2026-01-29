@@ -46,6 +46,15 @@
 
 html {
     scroll-behavior: smooth;
+    scrollbar-width: none;
+    /* Firefox */
+    -ms-overflow-style: none;
+    /* IE/Edge */
+}
+
+html::-webkit-scrollbar {
+    display: none;
+    /* Chrome, Safari, Opera */
 }
 
 body {
@@ -68,6 +77,37 @@ body {
     z-index: 1000;
     opacity: 0.04;
     background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+}
+
+/* --- Hexagon Scroll Frame --- */
+.hex-frame {
+    position: fixed;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%) translateX(50%);
+    /* Half off-screen to the right */
+    width: 90vh;
+    height: 90vh;
+    z-index: 1;
+    /* Behind content, above background */
+    pointer-events: none;
+    will-change: transform;
+}
+
+.hex-frame-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    opacity: 0.12;
+    /* Subtle, decorative */
+    filter: drop-shadow(0 0 80px rgba(16, 185, 129, 0.25));
+}
+
+/* Hide hexagon on mobile/tablet for simplicity */
+@media (max-width: 900px) {
+    .hex-frame {
+        display: none;
+    }
 }
 
 /* --- Navigation --- */
@@ -139,6 +179,8 @@ body {
     align-items: center;
     padding: var(--space-xl) var(--content-padding);
     padding-left: 12%;
+    position: relative;
+    /* Added context for scroll indicator */
 }
 
 .hero-content {
@@ -244,6 +286,41 @@ body {
 }
 
 /* --- Services Section --- */
+.services-scarcity {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    flex-wrap: wrap;
+    margin-bottom: var(--space-md);
+}
+
+.scarcity-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    background: rgba(139, 92, 246, 0.1);
+    border: 1px solid rgba(139, 92, 246, 0.3);
+    border-radius: 4px;
+    font-family: var(--font-code);
+    font-size: 0.8rem;
+    color: var(--accent-purple);
+}
+
+.scarcity-count {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    background: rgba(16, 185, 129, 0.1);
+    border: 1px solid var(--accent-green);
+    border-radius: 4px;
+    font-family: var(--font-code);
+    font-size: 0.8rem;
+    color: var(--accent-green);
+    font-weight: 500;
+}
+
 .services-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -255,17 +332,41 @@ body {
     background: var(--bg-card);
     padding: var(--space-md);
     border-left: 3px solid var(--accent-green);
+    display: flex;
+    flex-direction: column;
 }
 
 .service-card h3 {
     font-family: var(--font-headline);
     font-size: 1.25rem;
+    margin-bottom: var(--space-xs);
+}
+
+.service-pricing {
+    font-family: var(--font-code);
+    font-size: 0.9rem;
+    color: var(--accent-green);
     margin-bottom: var(--space-sm);
+}
+
+.service-pricing strong {
+    font-size: 1.25rem;
 }
 
 .service-card p {
     color: var(--text-muted);
     font-size: 0.95rem;
+    margin-bottom: var(--space-sm);
+}
+
+.service-card .btn {
+    margin-top: auto;
+    align-self: flex-start;
+}
+
+.service-card--primary {
+    border-left-width: 4px;
+    box-shadow: 0 4px 20px rgba(16, 185, 129, 0.1);
 }
 
 .service-card--offset {
@@ -447,6 +548,137 @@ body {
     border-bottom-color: var(--accent-purple);
 }
 
+/* --- Scroll Indicator --- */
+.scroll-indicator {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+
+
+.scroll-text {
+    font-family: var(--font-code);
+    font-size: 0.75rem;
+    color: var(--text-dim);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.scroll-line {
+    width: 1px;
+    height: 40px;
+    background: linear-gradient(to bottom, var(--accent-green), transparent);
+    animation: scrollBounce 2s infinite;
+}
+
+@keyframes scrollBounce {
+
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: translateY(0);
+    }
+
+    40% {
+        transform: translateY(-5px);
+    }
+
+    60% {
+        transform: translateY(-3px);
+    }
+}
+
+.scroll-indicator.fade-out {
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* --- Community Section --- */
+.community {
+    background: var(--bg-primary);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.community-content {
+    max-width: 600px;
+    margin: 0 auto var(--space-lg);
+}
+
+.community-description {
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    margin-bottom: var(--space-md);
+}
+
+/* --- Discord Widget --- */
+.discord-widget-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    position: relative;
+}
+
+/* Connecting line from text to widget */
+.discord-widget-container::before {
+    content: '';
+    position: absolute;
+    top: -2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1px;
+    height: 2rem;
+    background: linear-gradient(to bottom, transparent, var(--accent-green));
+}
+
+.discord-widget {
+    border-radius: 12px;
+    border: 1px solid var(--accent-green);
+    box-shadow: 0 0 20px rgba(16, 185, 129, 0.15),
+        0 8px 32px rgba(0, 0, 0, 0.3);
+    background: transparent;
+    position: relative;
+}
+
+/* Subtle glow effect on the border */
+.discord-widget::before {
+    content: '';
+    position: absolute;
+    inset: -1px;
+    border-radius: 12px;
+    padding: 1px;
+    background: linear-gradient(135deg, var(--accent-green), transparent 50%, var(--accent-green));
+    -webkit-mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+    mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+@media (max-width: 400px) {
+    .discord-widget {
+        width: 100%;
+        max-width: 350px;
+    }
+}
+
 /* --- Team Section --- */
 .team {
     background: var(--bg-secondary);
@@ -492,22 +724,7 @@ body {
     margin: 0 auto;
 }
 
-/* --- Community Section --- */
-.community {
-    background: var(--bg-primary);
-    text-align: center;
-}
 
-.community-content {
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-.community-description {
-    color: var(--text-muted);
-    font-size: 1.1rem;
-    margin-bottom: var(--space-md);
-}
 
 .btn-large {
     padding: 1rem 2rem;
@@ -597,8 +814,8 @@ body {
 .folder-panel-front {
     position: relative;
     z-index: 10;
-    min-height: 380px;
-    /* Taller for 9:16 ratio */
+    min-height: 480px;
+    /* Taller for comfortable bio fit */
     background: var(--bg-card);
     border: 1px solid var(--border-color);
     border-radius: 12px;
@@ -649,8 +866,10 @@ body {
     /* Styling content inside */
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    padding: var(--space-md) var(--space-lg);
+    justify-content: flex-start;
+    /* Changed from center to ensure top alignment */
+    padding: 2.5rem 2.5rem;
+    /* Adjusted for comfortable fit */
     pointer-events: none;
     overflow: hidden;
 }
@@ -671,11 +890,15 @@ body {
 }
 
 .folder-bio-text {
+    font-family: var(--font-body);
+    /* Explicitly match body font (Inter) */
     font-size: 1rem;
     line-height: 1.6;
-    color: var(--text-body);
+    color: var(--text-muted);
+    /* Changed from body to muted for better hierarchy but consistent weight */
     margin-bottom: var(--space-md);
-    font-weight: 300;
+    font-weight: 400;
+    /* reset to normal */
 }
 
 .folder-action {
