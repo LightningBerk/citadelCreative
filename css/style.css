@@ -570,13 +570,207 @@ body {
     max-width: 800px;
 }
 
-.team-member-card {
+/* --- Team Grid Layout --- */
+/* Switched to single column to allow space for the horizontal slide-out animation */
+.team-grid-single {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xl);
+    max-width: 600px;
+    /* Limits the width of the "Front" card */
+    margin: 0 auto;
+    /* Centers the stack */
+    padding-bottom: var(--space-xl);
+}
+
+/* --- Folder Card Component --- */
+.folder-card-wrapper {
+    position: relative;
+    width: 100%;
+    /* No visual styles on wrapper, it's just a container context */
+    transform-style: preserve-3d;
+    /* Helps with z-index stacking context */
+}
+
+/* Front Panel (The Cover) */
+.folder-panel-front {
+    position: relative;
+    z-index: 10;
+    min-height: 250px;
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: var(--space-md);
     display: grid;
-    grid-template-columns: 150px 1fr;
+    grid-template-columns: 140px 1fr;
     gap: var(--space-md);
     align-items: start;
-    padding: var(--space-md);
-    background: var(--bg-card);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* Box shadow helps separate front from back */
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
+}
+
+.folder-cover-content-only {
+    /* For cards without a photo (e.g. Open Roles) */
+    grid-column: 1 / -1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+}
+
+.click-hint {
+    margin-top: auto;
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    font-family: var(--font-code);
+    opacity: 0.7;
+    padding-top: var(--space-sm);
+}
+
+/* Back Panel (The Reveal) */
+.folder-panel-back {
+    position: absolute;
+    top: 5%;
+    /* Slight offset for depth */
+    right: 0;
+    width: 95%;
+    /* Slightly smaller than front */
+    height: 90%;
+    background: var(--bg-body);
+    /* Darker/different bg to distinguish */
+    border: 1px solid var(--accent-green);
+    border-radius: 8px;
+    z-index: 1;
+    /* Behind front */
+    opacity: 0;
+    /* Hidden by default */
+    transform: translateX(0) scale(0.95);
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+
+    /* Styling content inside */
+    display: flex;
+    align-items: center;
+    padding: var(--space-md) var(--space-md) var(--space-md) var(--space-xl);
+    /* Left padding larger for overlap */
+    pointer-events: none;
+    /* Can't click when hidden */
+    overflow: hidden;
+}
+
+.folder-content-inner {
+    opacity: 0;
+    transform: translateX(-20px);
+    transition: all 0.3s ease 0.1s;
+    /* Delay content fade in */
+}
+
+.folder-bio-header {
+    font-family: var(--font-headline);
+    color: var(--accent-green);
+    font-size: 1.1rem;
+    margin-bottom: var(--space-sm);
+}
+
+.folder-bio-text {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: var(--text-body);
+}
+
+.folder-action {
+    margin-top: var(--space-md);
+}
+
+/* --- Hover Animation --- */
+/* Only on desktops/fine pointers */
+@media (hover: hover) {
+    .folder-card-wrapper:hover .folder-panel-front {
+        transform: translateX(-20px);
+        /* Front moves slightly left */
+        border-color: var(--accent-green);
+    }
+
+    .folder-card-wrapper:hover .folder-panel-back {
+        opacity: 1;
+        transform: translateX(95%) scale(1);
+        /* Slide out to the right */
+        pointer-events: auto;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+    }
+
+    .folder-card-wrapper:hover .folder-content-inner {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* --- Mobile / Reduced Motion Fallback --- */
+@media (hover: none),
+(max-width: 900px),
+(prefers-reduced-motion: reduce) {
+
+    /* Different layout for mobile */
+    .folder-card-wrapper {
+        display: flex;
+        flex-direction: column;
+        border: 1px solid var(--border-color);
+        border-radius: 8px;
+        background: var(--bg-card);
+        overflow: hidden;
+    }
+
+    .folder-panel-front {
+        box-shadow: none;
+        border: none;
+        background: transparent;
+        min-height: auto;
+        padding-bottom: 0;
+    }
+
+    .click-hint {
+        display: none;
+    }
+
+    .folder-panel-back {
+        position: relative;
+        /* Static flow */
+        width: 100%;
+        height: auto;
+        opacity: 1;
+        transform: none;
+        top: 0;
+        right: 0;
+        border: none;
+        border-top: 1px dashed var(--border-color);
+        background: transparent;
+        padding: var(--space-md);
+        pointer-events: auto;
+        z-index: auto;
+        border-radius: 0;
+    }
+
+    .folder-content-inner {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+/* Team Photo Styles */
+.team-photo {
+    width: 140px;
+    height: 200px;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 3px solid var(--accent-green);
+    flex-shrink: 0;
+}
+
+.team-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
 }
 
 .team-member-card .team-photo-placeholder {

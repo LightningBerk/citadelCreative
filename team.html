@@ -47,33 +47,62 @@
 
     <!-- Team Members -->
     <section class="section team-page">
-        <div class="team-grid-dual">
-            <!-- The Build -->
-            <article class="team-member-card team-card--build">
-                <span class="role-badge role-badge--green">The Build</span>
-                <div class="team-member-info">
-                    <h2 class="team-role-title">Founder & Build Lead</h2>
-                    <p class="team-name">Asa</p>
-                    <p class="team-bio-short">I've spent years building real skills across 3D art,
-                        photography/videography, web development, and automation—shipping game assets with 40K+
-                        downloads, deploying production AI systems, and managing complete creative workflows. I
-                        understand the strategy and architecture behind every project, not just the tools. Now I
-                        leverage AI to accelerate execution without sacrificing the craftsmanship and intentionality
-                        that separates real work from generic output.</p>
+        <div class="team-grid-single">
+            <!-- The Build (Folder Card) -->
+            <div class="folder-card-wrapper">
+                <!-- Back Panel (Bio Reveal) -->
+                <div class="folder-panel-back">
+                    <div class="folder-content-inner">
+                        <h3 class="folder-bio-header">About Asa</h3>
+                        <p class="folder-bio-text">I've spent years building real skills across 3D art,
+                            photography/videography, web development, and automation—shipping game assets with 40K+
+                            downloads, deploying production AI systems, and managing complete creative workflows. I
+                            understand the strategy and architecture behind every project, not just the tools. Now I
+                            leverage AI to accelerate execution without sacrificing the craftsmanship and intentionality
+                            that separates real work from generic output.</p>
+                    </div>
                 </div>
-            </article>
 
-            <!-- The Opportunity -->
-            <article class="team-member-card team-card--opportunity">
-                <span class="role-badge role-badge--purple">The Opportunity</span>
-                <div class="team-member-info">
-                    <h2 class="team-role-title">Open Roles</h2>
-                    <p class="team-name">Strategy? Sales? Ops?</p>
-                    <p class="team-bio-short">We're building a vehicle. You tell us how you want to drive it. If you've
-                        got a skill that fits, let's talk.</p>
-                    <a href="mailto:asa@citadelcreative.xyz" class="btn btn-secondary">Let's Talk</a>
+                <!-- Front Panel (Cover) -->
+                <article class="folder-panel-front team-card--build">
+                    <div class="team-photo">
+                        <img src="images/faschingPortrait.PNG" alt="Asa - Founder & Build Lead">
+                    </div>
+                    <div class="team-member-info">
+                        <span class="role-badge role-badge--green">The Build</span>
+                        <h2 class="team-role-title">Founder & Build Lead</h2>
+                        <p class="team-name">Asa</p>
+                        <p class="click-hint">Hover to view bio →</p>
+                    </div>
+                </article>
+            </div>
+
+            <!-- The Opportunity (Folder Card) -->
+            <div class="folder-card-wrapper">
+                <!-- Back Panel (Details Reveal) -->
+                <div class="folder-panel-back">
+                    <div class="folder-content-inner">
+                        <h3 class="folder-bio-header">Your Role</h3>
+                        <p class="folder-bio-text">We're building a vehicle. You tell us how you want to drive it. If
+                            you've
+                            got a skill that fits, let's talk.</p>
+                        <div class="folder-action">
+                            <a href="mailto:asa@citadelcreative.xyz" class="btn btn-secondary">Let's Talk</a>
+                        </div>
+                    </div>
                 </div>
-            </article>
+
+                <!-- Front Panel (Cover) -->
+                <article class="folder-panel-front team-card--opportunity">
+                    <div class="folder-cover-content-only">
+                        <span class="role-badge role-badge--purple">The Opportunity</span>
+                        <div class="spacer-xs"></div>
+                        <h2 class="team-role-title">Open Roles</h2>
+                        <p class="team-name">Strategy? Sales? Ops?</p>
+                        <p class="click-hint">Hover to see more →</p>
+                    </div>
+                </article>
+            </div>
         </div>
     </section>
 
