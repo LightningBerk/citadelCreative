@@ -4,10 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Citadel — Accelerate Your Ideation</title>
+    <title>Citadel — Your AI Knowledge Control Center</title>
     <link rel="icon" type="image/png" href="images/citadelHex.png">
     <meta name="description"
-        content="AI-powered knowledge acceleration for Obsidian. Dump thoughts, link later, let AI amplify your iteration. $20 early adopter access includes setup + support.">
+        content="Citadel is an AI-powered software control center that bridges your knowledge tools with the AI of your choice. Now in early beta — help us build it.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -23,11 +23,18 @@
     <!-- Hero Section -->
     <header class="hero">
         <nav class="nav nav-scroll-hidden" id="stickyNav">
+            <a href="index.html" class="back-link">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="15 18 9 12 15 6" />
+                </svg>
+                Citadel Creative
+            </a>
             <a href="index.html" class="logo">
                 <span class="logo-icon">⬡</span>
                 <span class="logo-text">Citadel</span>
             </a>
-            <a href="#pricing" class="nav-pricing">Pricing</a>
+            <a href="#pricing" class="nav-pricing">Join Beta</a>
         </nav>
 
         <div class="hero-content">
@@ -36,17 +43,32 @@
                     <span class="logo-icon">⬡</span>
                     <span class="logo-text">Citadel</span>
                 </div>
-                <div class="splash-text">Early Access!</div>
+                <div class="splash-text">Beta!</div>
             </div>
-            <div class="hero-badge">Limited Time Early Adopter Launch</div>
-            <h1 class="hero-title">Accelerate Your <span class="gradient-text">Ideation</span></h1>
+            <div class="hero-badge">🔬 Active Beta — Shape What This Becomes</div>
+            <h1 class="hero-title">Your Knowledge.<br>Your AI.<br><span class="gradient-text">One Control Center.</span>
+            </h1>
             <p class="hero-subtitle">
-                Dump thoughts. Link later. Let AI amplify your iteration.<br>
-                The Obsidian + Claude stack that turns scattered notes into connected insight.
+                Citadel is a software layer that bridges your note-taking system with the AI of your choice —
+                so your tools actually talk to each other, and your thinking compounds.
             </p>
+
+            <!-- Early Adopter Progress Bar -->
+            <div class="adopter-bar-wrap">
+                <div class="adopter-bar-label">
+                    <span class="adopter-bar-text">🛡️ <strong>13</strong> of 100 founding beta spots claimed</span>
+                    <span class="adopter-bar-pct">13%</span>
+                </div>
+                <div class="adopter-bar-track">
+                    <div class="adopter-bar-fill" style="--fill-pct: 13%"></div>
+                </div>
+                <p class="adopter-bar-note">Founding testers are co-builders. Your feedback shapes the software, not
+                    just the docs.</p>
+            </div>
+
             <div class="hero-cta">
-                <a href="#pricing" class="btn btn-primary">Get Citadel — $20</a>
-                <a href="#how-it-works" class="btn btn-secondary">See How It Works</a>
+                <a href="#pricing" class="btn btn-primary">Join as a Founding Tester — $20</a>
+                <a href="#vision" class="btn btn-secondary">See the Vision</a>
             </div>
         </div>
 
@@ -57,7 +79,7 @@
                 <div class="node node-3"></div>
                 <div class="node node-4"></div>
                 <div class="node node-center">
-                    <span>AI</span>
+                    <span>⬡</span>
                 </div>
                 <svg class="connections" viewBox="0 0 300 300">
                     <line x1="150" y1="150" x2="50" y2="80" class="connection-line" />
@@ -72,44 +94,99 @@
     <!-- Problem Section -->
     <section class="section problem" id="problem">
         <div class="container">
-            <h2 class="section-title">The <span class="gradient-text">Problem</span></h2>
+            <h2 class="section-title">The <span class="gradient-text">Broken Landscape</span></h2>
             <div class="problem-grid node-flow">
                 <div class="problem-card nexus-node" id="prob1">
-                    <div class="problem-icon">📝</div>
-                    <h3>Thoughts Scatter</h3>
-                    <p>Great ideas get lost in the chaos. Notes pile up but never connect into something bigger.</p>
+                    <div class="problem-icon">🏝️</div>
+                    <h3>Tools That Don't Talk</h3>
+                    <p>Your notes live in one place. Your AI lives somewhere else. The bridge between them is you —
+                        copy-pasting like it's 2010.</p>
                 </div>
                 <div class="problem-card nexus-node" id="prob2">
-                    <div class="problem-icon">🔗</div>
-                    <h3>Linking Takes Forever</h3>
-                    <p>Obsidian's power is in connections—but building them manually is slow and tedious.</p>
+                    <div class="problem-icon">🔒</div>
+                    <h3>Locked Into One Stack</h3>
+                    <p>Every solution forces a choice: this AI, that app. Your knowledge ecosystem shouldn't be hostage
+                        to one vendor's roadmap.</p>
                 </div>
                 <div class="problem-card nexus-node" id="prob3">
-                    <div class="problem-icon">🐢</div>
-                    <h3>Slow Iteration</h3>
-                    <p>You know there's insight buried in your notes. Mining it takes hours you don't have.</p>
+                    <div class="problem-icon">⚗️</div>
+                    <h3>Configuration Hell</h3>
+                    <p>Making AI actually useful with your notes takes hours of tinkering. Results are fragile. Breaking
+                        changes break everything.</p>
                 </div>
                 <div class="node-connector-lines"></div>
             </div>
         </div>
     </section>
 
-    <!-- Solution Section -->
-    <section class="section solution" id="solution">
+    <!-- Vision Section -->
+    <section class="section solution" id="vision">
         <div class="container">
             <div class="solution-content">
-                <h2 class="section-title">Citadel <span class="gradient-text">Amplifies</span> Your Flow</h2>
+                <h2 class="section-title">The <span class="gradient-text">Software Layer</span> That Should Exist</h2>
                 <p class="solution-text">
-                    Obsidian's magic is "dump now, organize later." Citadel supercharges this with an AI agent
-                    that understands your vault, surfaces connections you missed, and accelerates your iteration
-                    from days to minutes.
+                    Citadel is what we're building: a software control center that sits between your notes and your AI.
+                    Connect Obsidian, Notion, Roam — or whatever you think in. Plug in Claude, GPT, Gemini — or whatever
+                    you trust.
+                    Citadel handles the wiring, the context, and the workflow so you can just think.
                 </p>
                 <ul class="solution-list">
-                    <li><span class="check">✓</span> Capture thoughts rapidly—AI handles the linking</li>
-                    <li><span class="check">✓</span> Surface buried connections across your entire vault</li>
-                    <li><span class="check">✓</span> Iterate on ideas at the speed of thought</li>
-                    <li><span class="check">✓</span> Battle-tested guidance file that makes Claude actually useful</li>
+                    <li><span class="check">✓</span> Works with <strong>any major note-taking system</strong></li>
+                    <li><span class="check">✓</span> Works with <strong>any frontier AI model</strong></li>
+                    <li><span class="check">✓</span> Surfaces connections and context your AI couldn't see before</li>
+                    <li><span class="check">✓</span> Built as real software — not a config trick, not a workaround</li>
                 </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Beta Co-Builder Section -->
+    <section class="section beta-cta" id="beta">
+        <div class="container">
+            <div class="beta-cta-inner">
+                <div class="beta-badge-large">🔬 EARLY BETA</div>
+                <h2 class="beta-cta-title">This Software Only Gets Built <span class="gradient-text">With You</span>
+                </h2>
+                <p class="beta-cta-desc">
+                    We have a clear vision and a working foundation. What we need now are real users in real workflows
+                    surfacing the edge cases, the friction points, the missing pieces that make the difference between
+                    "good enough" and genuinely polished software. If that's you — you're exactly who we're looking for.
+                </p>
+                <div class="beta-perks">
+                    <div class="beta-perk">
+                        <div class="beta-perk-icon">🏗️</div>
+                        <div class="beta-perk-text">
+                            <strong>You're Building It With Us</strong>
+                            <span>Founding testers don't just use the software — they shape it. Your sessions become our
+                                spec.</span>
+                        </div>
+                    </div>
+                    <div class="beta-perk">
+                        <div class="beta-perk-icon">🗺️</div>
+                        <div class="beta-perk-text">
+                            <strong>Vote on the Roadmap</strong>
+                            <span>Integrations, features, UX — founding testers have a direct line to what gets
+                                prioritized next.</span>
+                        </div>
+                    </div>
+                    <div class="beta-perk">
+                        <div class="beta-perk-icon">🔒</div>
+                        <div class="beta-perk-text">
+                            <strong>Founding Price — Forever</strong>
+                            <span>$20 now. As Citadel matures into full software, the price will reflect that. Yours
+                                won't.</span>
+                        </div>
+                    </div>
+                    <div class="beta-perk">
+                        <div class="beta-perk-icon">💬</div>
+                        <div class="beta-perk-text">
+                            <strong>Direct Access to the Builder</strong>
+                            <span>Not a ticket queue. Message Asa directly on Discord. Stuck on setup? He'll walk you
+                                through it.</span>
+                        </div>
+                    </div>
+                </div>
+                <a href="#pricing" class="btn btn-primary btn-large">Become a Founding Tester</a>
             </div>
         </div>
     </section>
@@ -117,13 +194,15 @@
     <!-- How It Works -->
     <section class="section how-it-works" id="how-it-works">
         <div class="container">
-            <h2 class="section-title">How It <span class="gradient-text">Works</span></h2>
+            <h2 class="section-title">How It <span class="gradient-text">Works Today</span></h2>
+            <p class="section-subtitle">The beta gives you a working implementation of the Citadel layer — built on
+                Obsidian + Claude, with broader integration support on the active roadmap.</p>
             <div class="steps-flow">
                 <div class="step nexus-node" id="step1">
                     <div class="step-number"><span>1</span></div>
-                    <h3>Drop In</h3>
-                    <p>Add the Citadel guidance file to your Obsidian vault. Works with Claude Desktop or Claude Code.
-                    </p>
+                    <h3>Connect</h3>
+                    <p>Install Citadel into your Obsidian vault. The onboarding guide handles Claude Desktop or Claude
+                        Code configuration step by step.</p>
                 </div>
 
                 <div class="flow-path">
@@ -135,8 +214,9 @@
 
                 <div class="step nexus-node" id="step2">
                     <div class="step-number"><span>2</span></div>
-                    <h3>Configure</h3>
-                    <p>Quick MCP setup connects Claude to your vault. We guide you through every step.</p>
+                    <h3>Command</h3>
+                    <p>Claude gains full context of your vault. Ask it to find connections, draft from your notes, or
+                        link ideas you haven't linked yet.</p>
                 </div>
 
                 <div class="flow-path">
@@ -148,8 +228,9 @@
 
                 <div class="step nexus-node" id="step3">
                     <div class="step-number"><span>3</span></div>
-                    <h3>Accelerate</h3>
-                    <p>Start dumping thoughts. Claude understands your system and amplifies your ideation.</p>
+                    <h3>Compound</h3>
+                    <p>Your knowledge base gets smarter every session. Citadel learns your system. You stop managing
+                        tools and start using them.</p>
                 </div>
             </div>
         </div>
@@ -158,13 +239,13 @@
     <!-- What's Included -->
     <section class="section included" id="included">
         <div class="container">
-            <h2 class="section-title">What's <span class="gradient-text">Included</span></h2>
+            <h2 class="section-title">Early Access <span class="gradient-text">Foundation</span></h2>
             <div class="included-hero nexus-node">
                 <div class="included-hero-visual">
                     <div class="mini-node-cluster">
                         <div class="mini-node node-brain">🧠</div>
                         <div class="mini-node node-bulb">💡</div>
-                        <div class="mini-node node-doc-center">📄</div>
+                        <div class="mini-node node-doc-center">⬡</div>
                         <div class="mini-node node-note">📝</div>
                         <svg class="mini-connections" viewBox="0 0 200 200">
                             <line x1="100" y1="100" x2="40" y2="40" class="mini-line" />
@@ -174,15 +255,19 @@
                     </div>
                 </div>
                 <div class="included-hero-content">
-                    <h3>The Complete Citadel Stack</h3>
+                    <h3>What You Get In Beta</h3>
                     <p class="included-text">
-                        A battle-tested 350+ line guidance file that makes Claude actually useful,
-                        comprehensive setup guides for any OS, and direct Discord access for setup support.
+                        The working Citadel software layer for Obsidian + Claude — a battle-tested 350+ line context
+                        protocol that makes your AI genuinely understand your vault, plus full setup guides and
+                        direct onboarding support. This is the functional core. The broader software is what we build
+                        together.
                     </p>
                     <div class="mini-features">
-                        <span class="pill"><span class="check">✓</span> Protocol File</span>
-                        <span class="pill"><span class="check">✓</span> Setup Docs</span>
-                        <span class="pill"><span class="check">✓</span> Priority Support</span>
+                        <span class="pill"><span class="check">✓</span> Citadel Protocol</span>
+                        <span class="pill"><span class="check">✓</span> Setup Guides (All OS)</span>
+                        <span class="pill"><span class="check">✓</span> Onboarding Support</span>
+                        <span class="pill"><span class="check">✓</span> All Future Updates</span>
+                        <span class="pill"><span class="check">✓</span> Roadmap Vote</span>
                     </div>
                 </div>
             </div>
@@ -193,22 +278,146 @@
     <section class="section pricing" id="pricing">
         <div class="container">
             <div class="pricing-card">
-                <div class="pricing-badge">Limited Time Launch Offer</div>
+                <div class="pricing-badge">🔬 Founding Beta Tester Price</div>
                 <div class="pricing-amount">
                     <span class="currency">$</span>
                     <span class="price">20</span>
-                    <span class="period">one-time payment</span>
+                    <span class="period">one-time · yours forever</span>
                 </div>
-                <div class="limited-tag">Only for the first 100 early adopters</div>
+                <div class="limited-tag">First 100 founding testers only · 87 spots remaining</div>
                 <ul class="pricing-features">
-                    <li><span class="check">✓</span> claude.md guidance file</li>
-                    <li><span class="check">✓</span> Comprehensive setup guide</li>
-                    <li><span class="check">✓</span> Personal setup support</li>
-                    <li><span class="check">✓</span> Ongoing community access</li>
-                    <li><span class="check">✓</span> Future updates included</li>
+                    <li><span class="check">✓</span> Full Citadel beta software layer</li>
+                    <li><span class="check">✓</span> Complete setup guide (Win / Mac / Linux)</li>
+                    <li><span class="check">✓</span> Personal onboarding via Discord</li>
+                    <li><span class="check">✓</span> Direct line to the builder</li>
+                    <li><span class="check">✓</span> All future releases included</li>
+                    <li><span class="check">✓</span> Founding tester roadmap vote</li>
                 </ul>
-                <a href="#" class="btn btn-primary btn-large">Get Citadel Now</a>
-                <p class="pricing-note">Instant access. No subscription. No upsells.</p>
+                <a href="#" class="btn btn-primary btn-large">Join as a Founding Tester — $20</a>
+                <p class="pricing-note">Instant access. No subscription. Price rises significantly at v1.0.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section faq-section" id="faq">
+        <div class="container">
+            <h2 class="section-title">Frequently Asked <span class="gradient-text">Questions</span></h2>
+            <div class="faq-list">
+
+                <details class="faq-item">
+                    <summary class="faq-summary">
+                        What exactly is Citadel — a file, an app, or software?
+                        <span class="faq-chevron">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="6 9 12 15 18 9" />
+                            </svg>
+                        </span>
+                    </summary>
+                    <div class="faq-body">
+                        <p>Citadel is software — specifically a control layer that sits between your notes and your AI.
+                            In the current beta, that layer is implemented through a sophisticated context protocol (a
+                            structured configuration file) plus an MCP connection that gives your AI direct access to
+                            your vault. This is the working core of the system. As we develop Citadel further with beta
+                            tester input, it will grow into a full UI-driven application. The founding price reflects
+                            where we are now; the product will reflect where we're going.</p>
+                    </div>
+                </details>
+
+                <details class="faq-item">
+                    <summary class="faq-summary">
+                        Which note-taking apps and AI models does it support?
+                        <span class="faq-chevron">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="6 9 12 15 18 9" />
+                            </svg>
+                        </span>
+                    </summary>
+                    <div class="faq-body">
+                        <p>The beta works with <strong>Obsidian</strong> (our primary integration) and
+                            <strong>Claude</strong> (Desktop or Code). Broader integrations — Notion, Roam, Logseq, and
+                            support for GPT-4 and Gemini — are on the active roadmap and are exactly what founding
+                            tester feedback will help us prioritize and shape. If you have a strong preference for a
+                            specific stack, join and tell us — that's the whole point.</p>
+                    </div>
+                </details>
+
+                <details class="faq-item">
+                    <summary class="faq-summary">
+                        Do I need to know how to code?
+                        <span class="faq-chevron">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="6 9 12 15 18 9" />
+                            </svg>
+                        </span>
+                    </summary>
+                    <div class="faq-body">
+                        <p>No. If you can follow a setup guide, you can get Citadel running. We document every step —
+                            including the MCP configuration, which trips people up on their own. As a beta tester with
+                            direct Discord access, you also have Asa available if you hit something the guide doesn't
+                            cover. We want to know about those gaps — that's how the guide improves.</p>
+                    </div>
+                </details>
+
+                <details class="faq-item">
+                    <summary class="faq-summary">
+                        What does "founding tester" actually mean?
+                        <span class="faq-chevron">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="6 9 12 15 18 9" />
+                            </svg>
+                        </span>
+                    </summary>
+                    <div class="faq-body">
+                        <p>It means your experience with the product directly influences what Citadel becomes. When you
+                            run into friction, we want to know about it — that's a missing feature or a broken flow that
+                            gets added to the backlog. Founding testers vote on what gets built next. Your use cases
+                            become our use cases. We can only build software that handles the real world if real people
+                            are using it in the real world.</p>
+                    </div>
+                </details>
+
+                <details class="faq-item">
+                    <summary class="faq-summary">
+                        Is there a monthly subscription?
+                        <span class="faq-chevron">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="6 9 12 15 18 9" />
+                            </svg>
+                        </span>
+                    </summary>
+                    <div class="faq-body">
+                        <p>Not for founding testers. $20, once. You'll need a Claude.ai account (free tier works for
+                            getting started) and Obsidian is free for personal use. When Citadel grows into full
+                            software and supports multiple integrations, the pricing model will evolve — but your
+                            founding tester access is permanent and grandfathered.</p>
+                    </div>
+                </details>
+
+                <details class="faq-item">
+                    <summary class="faq-summary">
+                        What does "beta" mean in practice?
+                        <span class="faq-chevron">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="6 9 12 15 18 9" />
+                            </svg>
+                        </span>
+                    </summary>
+                    <div class="faq-body">
+                        <p>The core system works — we use it every day. "Beta" means the broader software vision
+                            (multi-app integrations, UI, additional AI models) is still being built, and the founding
+                            tester cohort is how we build it well. You're not getting something broken. You're getting
+                            something real at the stage where your input still shapes the outcome. That's a
+                            fundamentally different position than buying finished software off a shelf.</p>
+                    </div>
+                </details>
+
             </div>
         </div>
     </section>
@@ -220,11 +429,11 @@
                 <div class="footer-brand">
                     <span class="logo-icon">⬡</span>
                     <span class="logo-text">Citadel</span>
-                    <p class="footer-tagline">Your fortress of knowledge.</p>
+                    <p class="footer-tagline">Build your knowledge fortress.</p>
                 </div>
                 <div class="footer-community">
                     <h4>Join the Community</h4>
-                    <p>Connect with other Citadel users, share workflows, and help shape the future of the product.</p>
+                    <p>Connect with other Citadel testers, share workflows, and help shape what gets built next.</p>
                     <a href="https://discord.gg/XPNaVvCxXm" class="btn btn-discord">
                         <svg class="discord-icon" viewBox="0 0 24 24" fill="currentColor">
                             <path
@@ -235,7 +444,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2026 <a href="index.html">Citadel Creative</a>. Built with the stack it sells.</p>
+                <p>&copy; 2026 <a href="index.html">Citadel Creative</a>. Built with the software it's becoming.</p>
             </div>
         </div>
     </footer>

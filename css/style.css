@@ -450,19 +450,85 @@ body {
     align-items: center;
 }
 
-.product-screenshot-placeholder {
+.product-node-visual {
     width: 100%;
-    max-width: 400px;
-    aspect-ratio: 16/10;
-    background: var(--bg-secondary);
-    border: 1px solid var(--bg-card);
+    max-width: 320px;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    font-family: var(--font-code);
-    color: var(--text-dim);
-    font-size: 0.9rem;
+    gap: 1rem;
 }
+
+.product-node-svg {
+    width: 100%;
+    height: auto;
+    filter: drop-shadow(0 0 24px rgba(16, 185, 129, 0.18));
+}
+
+.product-node-caption {
+    font-family: var(--font-code);
+    font-size: 0.75rem;
+    color: var(--text-dim);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    text-align: center;
+}
+
+/* Animate the outer SVG circle nodes */
+.pv-node-1 {
+    animation: pv-float 5s ease-in-out infinite;
+}
+
+.pv-node-2 {
+    animation: pv-float 5s ease-in-out infinite 0.8s;
+}
+
+.pv-node-3 {
+    animation: pv-float 5s ease-in-out infinite 1.6s;
+}
+
+.pv-node-4 {
+    animation: pv-float 5s ease-in-out infinite 2.4s;
+}
+
+@keyframes pv-float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+/* Subtle pulse on the centre ring */
+.pv-pulse-ring {
+    transform-origin: 140px 130px;
+    animation: pv-pulse 3s ease-in-out infinite;
+}
+
+@keyframes pv-pulse {
+
+    0%,
+    100% {
+        opacity: 0.15;
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: 0.35;
+        transform: scale(1.12);
+    }
+}
+
+/* The center node itself breathes */
+.pv-node-center {
+    transform-origin: 140px 130px;
+    animation: pv-pulse 3s ease-in-out infinite 0.5s;
+}
+
 
 /* --- Footer --- */
 .footer {
@@ -511,6 +577,52 @@ body {
     .footer {
         flex-direction: column;
         gap: var(--space-sm);
+        text-align: center;
+    }
+}
+
+/* --- Small Mobile --- */
+@media (max-width: 480px) {
+    .nav {
+        padding: 0.5rem 1rem;
+    }
+
+    .nav-links {
+        gap: 0.75rem;
+    }
+
+    .nav-links a {
+        font-size: 0.75rem;
+    }
+
+    .hero h1 {
+        font-size: clamp(2rem, 8vw, 3.5rem);
+    }
+
+    .hero p {
+        font-size: 0.95rem;
+    }
+
+    .hero-cta-row {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .hero-cta-row .btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .product-description {
+        font-size: 0.95rem;
+    }
+
+    .product-cta .btn {
+        width: 100%;
         text-align: center;
     }
 }

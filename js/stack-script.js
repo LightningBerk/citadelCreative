@@ -23,6 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
 function initDynamicHeader() {
     const nav = document.getElementById('stickyNav');
     const pricingBtn = document.querySelector('.nav-pricing');
+    const backLink = document.querySelector('.back-link');
 
     if (!nav || !pricingBtn) return;
 
@@ -31,10 +32,12 @@ function initDynamicHeader() {
             nav.classList.remove('nav-scroll-hidden');
             nav.classList.add('nav-centered');
             pricingBtn.classList.add('show');
+            if (backLink) backLink.classList.add('show');
         } else {
             nav.classList.add('nav-scroll-hidden');
             nav.classList.remove('nav-centered');
             pricingBtn.classList.remove('show');
+            if (backLink) backLink.classList.remove('show');
         }
     });
 }
@@ -144,7 +147,7 @@ function initScrollAnimations() {
 
     // Observe cards and sections
     const animateElements = document.querySelectorAll(
-        '.problem-card, .step, .included-card, .pricing-card'
+        '.problem-card, .step, .included-card, .pricing-card, .beta-perk, .faq-item'
     );
 
     animateElements.forEach((el, index) => {
