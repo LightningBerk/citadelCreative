@@ -1180,6 +1180,19 @@ body {
     background: rgba(139, 92, 246, 0.1);
 }
 
+.role-badge--orange {
+    color: #fbbf24;
+    background: rgba(245, 158, 11, 0.1);
+}
+
+.team-card--voice {
+    border-left: 3px solid #f59e0b;
+}
+
+.team-card--voice .team-photo {
+    border-color: #f59e0b;
+}
+
 /* Role-First Typography */
 .team-role-title {
     font-family: var(--font-headline);
